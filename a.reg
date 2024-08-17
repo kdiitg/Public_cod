@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\kd]
+@="Open with VS Code"
+"Icon"="C:\\Users\kdiitg\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe,0"
+
+[HKEY_CLASSES_ROOT\Directory\shell\kd\command]
+@="\"C:\\Users\kdiitg\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" \"%1\""

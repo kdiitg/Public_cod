@@ -1,0 +1,3 @@
+$path = "F:\"
+$lookBackTime = (Get-Date).AddHours(-2)
+Get-ChildItem -Path $path -Recurse | Where-Object { $_.LastAccessTime -gt $lookBackTime } | Select-Object FullName, LastAccessTime

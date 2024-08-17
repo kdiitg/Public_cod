@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    display: flex;
+    width: 80vw;
+    height: 80vh;
+}
+
+#image-container {
+    flex: 5;
+    position: relative;
+}
+
+#main-image {
+    width: 40%;
+    height: 40%;
+    border: 1px solid red;
+}
+
+#info-panel {
+    flex: 4;
+    padding: 10px;
+    background-color: lightgoldenrodyellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#input1, #input2 {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#attributes, #xml-details {
+    flex: 1;
+    overflow: auto;
+}
+
+button {
+    margin-top: auto;
+    padding: 10px;
+}

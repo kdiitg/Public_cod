@@ -1,0 +1,7 @@
+Map filter reduce
+clousre
+decoretor
+OOPs
+monkey patching
+dictonary comprehension
+one liner if else in python

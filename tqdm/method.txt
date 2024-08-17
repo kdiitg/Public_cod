@@ -1,0 +1,84 @@
+First, you need to install tqdm. You can do this using pip:
+
+
+pip install tqdm
+Basic Usage
+The simplest way to use tqdm is to wrap an iterable (like a list or range) with tqdm():
+
+
+==============================================================================================
+from tqdm import tqdm
+import time
+
+# Example of using tqdm with a loop
+for i in tqdm(range(100)):
+    time.sleep(0.1)  # Simulate some work
+Using tqdm with List Comprehensions
+tqdm can also be used with list comprehensions:
+
+==============================================================================================
+from tqdm import tqdm
+import time
+
+# Example with list comprehension
+results = [x**2 for x in tqdm(range(100))]
+Using tqdm with pandas
+==============================================================================================
+If you’re working with pandas, you can use tqdm to show progress in DataFrame operations:
+
+
+import pandas as pd
+from tqdm import tqdm
+tqdm.pandas()
+
+# Example with DataFrame apply
+df = pd.DataFrame({'a': range(100)})
+df['b'] = df['a'].progress_apply(lambda x: x**2)
+==============================================================================================
+Nested Progress Bars
+tqdm supports nested progress bars for loops within loops:
+
+
+from tqdm import tqdm
+import time
+
+for i in tqdm(range(5), desc='Outer loop'):
+    for j in tqdm(range(100), desc='Inner loop', leave=False):
+        time.sleep(0.01)
+==============================================================================================
+In this example, desc is used to add a description to each progress bar, and leave=False prevents the inner progress bars from remaining in the console after completion.
+
+Using tqdm with Functions
+If you’re processing items in a function, you can use tqdm with map or starmap:
+
+
+from tqdm import tqdm
+from multiprocessing import Pool
+
+def process_item(x):
+    time.sleep(0.1)  # Simulate some work
+    return x**2
+
+items = range(100)
+with Pool(4) as p:
+    results = list(tqdm(p.imap(process_item, items), total=len(items)))
+==============================================================================================
+Customizing Progress Bars
+You can customize the appearance and behavior of the progress bar by setting additional parameters:
+
+
+from tqdm import tqdm
+import time
+
+for i in tqdm(range(100), desc='Processing', ascii=True, ncols=100, unit='item'):
+    time.sleep(0.1)
+desc: A string to prefix the progress bar with.
+ascii: Use ASCII characters for the bar (good for environments where Unicode is not supported).
+ncols: Set the width of the progress bar.
+unit: Set the unit of each iteration.
+Conclusion
+tqdm is a powerful and flexible library for adding progress bars to your loops and iterable processing tasks. It’s easy to use and integrates well with various Python libraries and frameworks.
+
+==============================================================================================
+
+
