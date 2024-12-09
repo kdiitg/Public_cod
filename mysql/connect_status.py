@@ -4,7 +4,7 @@ import mysql.connector
 host = "localhost"
 # host = "localhost:3306"
 user = "root"  # Usually 'root' by default
-password = "7896"
+password = "1234"
 database = "kddb"
 
 try:
