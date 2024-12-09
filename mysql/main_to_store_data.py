@@ -41,7 +41,7 @@ def fetch_query(connection, query):
         print(f"The error '{e}' occurred")
 
 # Replace with your own MySQL server and database credentials
-connection = create_connection("localhost", "root", "7896", "kddb")
+connection = create_connection("localhost", "root", "1234", "kddb")
 
 # Example: Creating a table
 create_table_query = """
